@@ -22,9 +22,18 @@ sliderColor = (e) => {
             b = slider[2].value;
 
             displayBg.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            stopPropagation();
         })
     }
 }
 
+mouseColor = (e) => {
+    let xPos = Math.round((e.clientX / window.innerWidth) * 255);
+    let yPos = Math.round((e.clientX / window.innerHeight) * 255);
+    displayBg.style.backgroundColor = `rgb(${xPos}, ${yPos}, 0)`;
+    console.log(xPos, yPos);
+}
+
 randomBtn.addEventListener("click", randomColor);
 sliderColor();
+document.body.addEventListener("mousemove", mouseColor);
