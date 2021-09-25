@@ -1,0 +1,16 @@
+@use "./components/change-bg";
+@use "./components/display-bg";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    height: 50vh;
+    margin: 2rem auto;
+    display: flex;
+}
